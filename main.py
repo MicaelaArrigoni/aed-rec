@@ -1,6 +1,7 @@
 # main
 import modulo as m
 
+
 def main():
     opc = -1
     temas = []
@@ -19,6 +20,10 @@ def main():
             if len(temas) == 0:
                 print('ERROR: ')
 
+            elif opc == 3:
+                mat = m.generar_matriz(temas)
+                m.mostrar_matriz(mat)
+
             elif opc == 6:
                 idioma_req = int(input('Ingrese idioma que desea filtrar: '))
                 m.gen_binario(idioma_req, temas)
@@ -27,7 +32,6 @@ def main():
                 idioma_req = int(input('Ingrese idioma: '))
                 m.leer_binario(idioma_req)
 
- 
 
 if __name__ == '__main__':
     main()
